@@ -1,0 +1,13 @@
+.cars-list {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.delete,
+.update {
+  float: right;
+}
+
+.update {
+  margin-right: 5px;
+}

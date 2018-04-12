@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Cars App</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <h1>Cars App</h1>
+        <p>Car Count <span id="car-count">0</span></p>
+        <ul id="cars-list" class="list-group cars-list"></ul>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm">
+      <form id="car-form">
+        <h2 class="form-title">Add a car</h2>
+        <div class="form-group">
+          <input type="text" class="form-control" name="make" id="make" placeholder="make?">
+        </div>
+        <div class="form-group">
+          <input type="number" class="form-control" name="bhp" id="bhp" placeholder="bhp?">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="submit-btn btn btn-primary">Add Car</button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <script id="car-template" type="text/x-handlebars-template">
+    <li data-id="{{_id}}" class="list-group-item">{{make}} has a bhp of {{bhp}}<button class="delete btn btn-danger" data-id="{{_id}}">&times;</button><button class="update btn btn-warning" data-id="{{_id}}">Edit</button></li>
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js" charset="utf-8"></script>
+  <script src="./scripts/main.js" charset="utf-8"></script>
+</body>
+</html>
